@@ -1,6 +1,9 @@
 import React from 'react';
 
-function Portfolio(){
+function Portfolio({portfolio, onPortfolio}){
+
+    onPortfolio();
+
     return (
         <div>Portfolio</div>
     )

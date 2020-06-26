@@ -36,7 +36,6 @@ const getPortfolio = (dispatch) => {
             portfolioList.reverse();
 
         }
-        console.log(portfolioList);
         await dispatch(actions.portfolio(portfolioList));
     });
 }
@@ -49,7 +48,9 @@ const mapDispatchToProps = (dispatch) => ({
     onPortfolio: () => getPortfolio(dispatch)
 });
 
-export default connect(
+const PortfolioContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(Portfolio);
+
+export default PortfolioContainer;
