@@ -32,16 +32,19 @@ const getPortfolio = (dispatch) => {
                     console.error(err);
                 })
             }
-
+            
             portfolioList.reverse();
 
         }
+
+        console.log(portfolioList);
+
         await dispatch(actions.portfolio(portfolioList));
     });
 }
 
 const mapStateToProps = (state) => ({
-    portfolio: state.portfolioData.list
+    portfolio: state.portfolioData.portfolio
 });
 
 const mapDispatchToProps = (dispatch) => ({

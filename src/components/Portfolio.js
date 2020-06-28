@@ -1,12 +1,32 @@
 import React from 'react';
 
-function Portfolio({portfolio, onPortfolio}){
+class Portfolio extends React.Component {
 
-    onPortfolio();
+    constructor(props){
+        super(props);
+    }
 
-    return (
-        <div>Portfolio</div>
-    )
+    componentDidMount(){
+        this.props.onPortfolio()
+    }
+
+    render(){
+
+        const { portfolio } = this.props;
+
+        return (
+            <div>
+                {   portfolio ?
+                    portfolio.map((list,index) => {
+                        return <div key={index}>
+                            <p>{list.title}</p>
+                        </div>
+                    })
+                    : null
+                }
+            </div>
+        )
+    }
 }
 
 export default Portfolio;
