@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Main(){
+function Contaxt(){
     return (
         <div></div>
     )
 }
 
-export default Main;
+export default Contaxt;
