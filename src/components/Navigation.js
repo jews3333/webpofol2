@@ -23,6 +23,8 @@ const Nav = styled.div`
     left:0;
     right:0;
     height:60px;
+    background:#1e1e1e;
+    border-bottom:1px solid #383838;
 
     &:after {
         content:"";

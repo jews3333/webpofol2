@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 function Main(){
     return (
-        <div></div>
+        <Fragment>dddddd</Fragment>
     )
 }
 

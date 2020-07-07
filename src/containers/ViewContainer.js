@@ -1,5 +1,6 @@
+
 import { connect } from 'react-redux';
-import Portfolio from '../components/Portfolio';
+import View from '../components/View';
 import getPortfolio from '../modules/getPortfolio';
 
 const mapStateToProps = (state) => ({
@@ -10,9 +11,9 @@ const mapDispatchToProps = (dispatch) => ({
     onPortfolio: () => getPortfolio(dispatch)
 });
 
-const PortfolioContainer = connect(
+const ViewContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Portfolio);
+)(View);
 
-export default PortfolioContainer;
+export default ViewContainer;

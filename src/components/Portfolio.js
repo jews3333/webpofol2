@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import Sidebar from './Sidebar';
+import styled from 'styled-components';
 
-class Portfolio extends React.Component {
+class Portfolio extends Component {
 
     constructor(props){
         super(props);
@@ -15,18 +17,18 @@ class Portfolio extends React.Component {
         const { portfolio } = this.props;
 
         return (
-            <div>
-                {   portfolio ?
-                    portfolio.map((list,index) => {
-                        return <div key={index}>
-                            <p>{list.title}</p>
-                        </div>
-                    })
-                    : null
-                }
-            </div>
+            <Fragment>
+                <Sidebar map={portfolio} />
+                <Content id="content">
+                    포폴
+                </Content>
+            </Fragment>
         )
     }
 }
+
+const Content = styled.div`
+    padding: 30px 30px 30px 280px;
+`;
 
 export default Portfolio;
