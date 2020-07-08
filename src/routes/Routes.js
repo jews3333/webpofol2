@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Main, PortfolioContainer, Profile, Contaxt, ViewContainer } from './index';
 import Navigation from '../components/Navigation';
+import Copyright from '../components/Copyright';
 import styled from 'styled-components';
 
 function Routes(){
@@ -18,6 +19,7 @@ function Routes(){
                     <Redirect path="*" to="/" />
                 </Switch>
             </Container>
+            <Copyright/>
         </Router>
     );
 }

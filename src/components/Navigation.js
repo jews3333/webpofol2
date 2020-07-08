@@ -38,7 +38,7 @@ const Image = styled.img`
     top:50%;
     left: 1em;
     transform: translateY(-50%);
-    height: 40px;
+    height: 30px;
 `;
 
 const Menu = styled.div`

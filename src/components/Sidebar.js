@@ -29,7 +29,12 @@ const Wrap = styled.div`
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-        display: none;
+        width:0.5em;
+        background:transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background:#464647;
     }
 `;
 
@@ -37,9 +42,16 @@ const Item = styled(Link)`
     display:block;
     padding:3px 10px;
     font-size:0.9em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 
     &:hover, &:focus, &.active {
         background:#37373d;
+    }
+
+    &.active {
+        color: #e2c08d;
     }
 `;
 
