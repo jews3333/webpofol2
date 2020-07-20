@@ -21,7 +21,7 @@ function View(props){
                         <Title>
                             {item.title}
                             <Date>Year {item.year}</Date>
-                            <Link href={item.url} target="_blank" title="새창열림">홈페이지</Link>
+                            {item.url ? <Link href={item.url} target="_blank" title="새창열림">Go to Website</Link> : null}
                         </Title>
                         <Sumry>{item.sumry}</Sumry>
                         <Img src={item.image}></Img>
@@ -42,7 +42,7 @@ const Wrap = styled.div`
 `;
 
 const Title = styled.h2`
-    font-size:1.8em;
+    font-size:1.6em;
     margin-bottom:0.5em;
     padding-bottom:0.5em;
     border-bottom:1px solid #383838;
@@ -66,6 +66,7 @@ const Link = styled.a`
     bottom:1em;
     right:0;
     font-size:0.6em;
+    font-weight:normal;
 `;
 
 const Img = styled.img`
