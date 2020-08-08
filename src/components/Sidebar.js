@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 function Sidebar(props){
     const { map, id } = props;
 
-    console.log(props)
-
     return (
         <Wrap id="sidebar">
             {map ?
@@ -57,7 +55,7 @@ const Item = styled(Link)`
 
 const Type = styled.strong`
     font-size:0.8em;
-    margin-right:3px;
+    margin-right:0.5em;
     color: ${props => props.type === 'Web' ? '#cbcb3c' : props.type === 'App' ? '#e14770' : '#9cdcda' }
 `;
 

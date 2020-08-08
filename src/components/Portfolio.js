@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Sidebar from './Sidebar';
 import styled from 'styled-components';
+import List from './List';
 
 class Portfolio extends Component {
 
@@ -20,7 +21,11 @@ class Portfolio extends Component {
             <Fragment>
                 <Sidebar map={portfolio} />
                 <Content id="content">
-                    포폴
+                    <Title>
+                        Portfolio
+                        <Length>Count : {portfolio ? portfolio.length : null}</Length>
+                    </Title>
+                    <List list={portfolio}/>
                 </Content>
             </Fragment>
         )
@@ -29,6 +34,20 @@ class Portfolio extends Component {
 
 const Content = styled.div`
     padding: 30px 30px 30px 280px;
+`;
+
+const Title = styled.h2`
+    font-size:1.4em;
+    margin-bottom:0.5em;
+    padding-bottom:0.5em;
+    border-bottom:1px solid #383838;
+    position:relative;
+`;
+
+const Length = styled.p`
+    font-size: 0.6em;
+    margin-top:0.5em;
+    font-weight:normal;
 `;
 
 export default Portfolio;
