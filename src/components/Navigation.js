@@ -10,8 +10,8 @@ function Navigation(){
             <Menu>
                 <Link exact to="/"><Strong>Home</Strong></Link>
                 <Link to="/portfolio"><Strong>Portfolio</Strong></Link>
-                <Link to="/profile"><Strong>Profile</Strong></Link>
-                <Link to="/contaxt"><Strong>Contaxt</Strong></Link>
+                {/* <Link to="/profile"><Strong>Profile</Strong></Link>
+                <Link to="/contaxt"><Strong>Contaxt</Strong></Link> */}
             </Menu>
         </Nav>
     )

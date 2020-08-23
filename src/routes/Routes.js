@@ -14,8 +14,8 @@ function Routes(){
                     <Route exact path="/" component={Main}/>
                     <Route path="/portfolio/:id" component={ViewContainer}/>
                     <Route path="/portfolio" component={PortfolioContainer}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/contaxt" component={Contaxt}/>
+                    {/* <Route path="/profile" component={Profile}/>
+                    <Route path="/contaxt" component={Contaxt}/> */}
                     <Redirect path="*" to="/" />
                 </Switch>
             </Container>

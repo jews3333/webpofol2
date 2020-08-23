@@ -21,7 +21,7 @@ function View(props){
                         <Title>
                             {item.title}
                             <Date>Production year : {item.year}</Date>
-                            {item.url ? <Link href={item.url} target="_blank" title="새창열림"><WebIcon src={Icon} alt="" />Website</Link> : null}
+                            {item.url ? <Link href={item.url} target="_blank" title="새창열림" rel="noreferrer noopener"><WebIcon src={Icon} alt="" />Website</Link> : null}
                         </Title>
                         <Sumry>{item.sumry}</Sumry>
                         <Img src={item.image}></Img>

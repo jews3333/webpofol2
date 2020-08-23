@@ -29,17 +29,28 @@ const Wrap = styled.div`
 
 const Item = styled(Link)`
     display:block;
+    width:20%;
     padding:0.5em;
+
+    &:hover, &:focus {
+        background:#37373d;
+    }
 `;
 
 const Thumb = styled.div`
-    height:15em;
     overflow:hidden;
+    padding-bottom:100%;
+    position:relative;
+    background:#101010;
 `;
 
 const Img = styled.img`
-    height:100%;
+    width:100%;
     vertical-align: top;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 `;
 
 const Title = styled.p`
