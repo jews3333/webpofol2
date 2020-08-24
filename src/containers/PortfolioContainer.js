@@ -3,7 +3,8 @@ import Portfolio from '../components/Portfolio';
 import getPortfolio from '../modules/getPortfolio';
 
 const mapStateToProps = (state) => ({
-    portfolio: state.portfolioData.portfolio
+    portfolio: state.portfolioData.portfolio,
+    sidebar: state.sidebarState.sidebar
 });
 
 const mapDispatchToProps = (dispatch) => ({

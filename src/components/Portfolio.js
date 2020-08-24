@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
+import SidebarContainer from '../containers/SidebarContainer';
 import styled from 'styled-components';
 import List from './List';
 
@@ -15,12 +16,12 @@ class Portfolio extends Component {
 
     render(){
 
-        const { portfolio } = this.props;
+        const { portfolio, sidebar } = this.props;
 
         return (
             <Fragment>
-                <Sidebar map={portfolio} />
-                <Content id="content">
+                <SidebarContainer />
+                <Content id="content" sidebar={sidebar}>
                     <Title>
                         Portfolio
                         <Length>Count : {portfolio ? portfolio.length : null}</Length>
@@ -33,7 +34,12 @@ class Portfolio extends Component {
 }
 
 const Content = styled.div`
-    padding: 30px 30px 30px 280px;
+    padding: 30px 30px 30px ${props => props.sidebar ? "280px" : "30px"};
+    transition: all 0.5s ease-in-out;
+
+    @media (max-width:768px){
+        padding: 30px 30px 30px ${props => props.sidebar ? "calc(40% + 30px)" : "30px"};
+    }
 `;
 
 const Title = styled.h2`

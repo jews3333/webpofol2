@@ -24,21 +24,36 @@ const MainContent = styled.div`
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    text-aLign: center;
+    text-align: center;
+    width:100%;
 `;
 
 const Image = styled.img`
     height:100px;
     margin-bottom:1em;
+
+    @media (max-width:768px){
+        height:60px;
+    }
 `;
 
 const Title = styled.h1`
     font-size:2em;
     margin-bottom:0.1em;
+
+    @media (max-width:768px){
+        font-size:1.6em;
+    }
 `;
 
 const Ul = styled.ul`
     display:flex;
+    padding:0 1.5em;
+    justify-content: center;
+
+    @media (max-width:768px){
+        font-size:0.6em;
+    }
 `;
 
 const Li = styled.li`

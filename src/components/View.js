@@ -1,18 +1,18 @@
 import React, { Fragment } from 'react';
-import Sidebar from './Sidebar';
+import SidebarContainer from '../containers/SidebarContainer';
 import styled from 'styled-components';
 import Icon from '../images/ico_web_32.png';
 
 function View(props){
 
-    const {portfolio, onPortfolio, match} = props;
+    const {portfolio, onPortfolio, match, sidebar} = props;
 
     if(!portfolio) onPortfolio();
 
     return (
         <Fragment>
-            <Sidebar map={portfolio} id={match.params.id}/>
-            <Content id="content">
+            <SidebarContainer id={match.params.id}/>
+            <Content id="content" sidebar={sidebar}>
                 {portfolio ?
                 portfolio.filter((row) => {
                     return row.id === match.params.id;
@@ -34,7 +34,12 @@ function View(props){
 }
 
 const Content = styled.div`
-    padding: 30px 30px 30px 280px;
+    padding: 30px 30px 30px ${props => props.sidebar ? "280px" : "30px"};
+    transition: all 0.5s ease-in-out;
+
+    @media (max-width:768px){
+        padding: 30px 30px 30px ${props => props.sidebar ? "calc(40% + 30px)" : "30px"};
+    }
 `;
 
 const Wrap = styled.div`

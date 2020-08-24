@@ -35,6 +35,10 @@ const Item = styled(Link)`
     &:hover, &:focus {
         background:#37373d;
     }
+
+    @media (max-width:768px){
+        width:50%;
+    }
 `;
 
 const Thumb = styled.div`
